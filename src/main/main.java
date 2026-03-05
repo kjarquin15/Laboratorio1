@@ -1,10 +1,10 @@
-package introduccion;
+package main;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class main {
     // VARIABLES GLOBALES
     static List<String> estudiantes = new ArrayList<>();
     static List<Double> calificaciones = new ArrayList<>();
@@ -103,37 +103,29 @@ public class Main {
             System.out.println("El promedio de calificaciones es: " + promedio);
         }
     }
-            } else if (opcion == 4) {
+    // METODO 5 - MEJOR ESTUDIANTE
+    public static void mostrarMejorEstudiante() {
 
-                if (calificaciones.isEmpty()) {
-                    System.out.println("No hay calificaciones registradas.");
-                } else {
+        if (calificaciones.isEmpty()) {
 
-                    double maxCalificacion = calificaciones.get(0);
-                    String estudianteMax = estudiantes.get(0);
+            System.out.println("No hay calificaciones registradas.");
 
-                    for (int i = 1; i < calificaciones.size(); i++) {
-                        if (calificaciones.get(i) > maxCalificacion) {
-                            maxCalificacion = calificaciones.get(i);
-                            estudianteMax = estudiantes.get(i);
-                        }
-                    }
+        } else {
 
-                    System.out.println("El estudiante con la calificación más alta es: "
-                            + estudianteMax + " con " + maxCalificacion);
+            double maxCalificacion = calificaciones.get(0);
+            String estudianteMax = estudiantes.get(0);
+
+            for (int i = 1; i < calificaciones.size(); i++) {
+
+                if (calificaciones.get(i) > maxCalificacion) {
+
+                    maxCalificacion = calificaciones.get(i);
+                    estudianteMax = estudiantes.get(i);
                 }
-
-            } else if (opcion == 5) {
-
-                System.out.println("Saliendo del sistema...");
-                break;
-
-            } else {
-
-                System.out.println("Opción no válida. Intente de nuevo.");
             }
-        }
 
-        scanner.close();
+            System.out.println("El estudiante con la calificación más alta es: "
+                    + estudianteMax + " con " + maxCalificacion);
+        }
     }
 }
