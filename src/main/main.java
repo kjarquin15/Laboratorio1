@@ -73,16 +73,22 @@ public class Main {
 
         System.out.println("Estudiante agregado correctamente.");
     }
+ // METODO 3 - MOSTRAR ESTUDIANTES
+    public static void mostrarEstudiantes() {
+        if (estudiantes.isEmpty()) {
+            System.out.println("No hay estudiantes registrados.");
 
-                if (estudiantes.isEmpty()) {
-                    System.out.println("No hay estudiantes registrados.");
-                } else {
-                    System.out.println("\nLista de estudiantes:");
-                    for (int i = 0; i < estudiantes.size(); i++) {
-                        System.out.println(estudiantes.get(i) +
-                                " - Calificación: " + calificaciones.get(i));
-                    }
-                }
+        } else {
+
+            System.out.println("\nLista de estudiantes:");
+
+            for (int i = 0; i < estudiantes.size(); i++) {
+
+                System.out.println(estudiantes.get(i) +
+                        " - Calificación: " + calificaciones.get(i));
+            }
+        }
+    }
 
             } else if (opcion == 3) {
 
