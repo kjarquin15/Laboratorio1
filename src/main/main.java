@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-
+    // VARIABLES GLOBALES
     static List<String> estudiantes = new ArrayList<>();
     static List<Double> calificaciones = new ArrayList<>();
 
@@ -15,6 +15,41 @@ public class Main {
 
         System.out.println("Bienvenido al sistema de gestión de estudiantes.");
 
+        while (true) {
+
+            mostrarMenu();
+
+            int opcion = Integer.parseInt(scanner.nextLine());
+
+            if (opcion == 1) {
+
+                agregarEstudiante(scanner);
+
+            } else if (opcion == 2) {
+
+                mostrarEstudiantes();
+
+            } else if (opcion == 3) {
+
+                calcularPromedio();
+
+            } else if (opcion == 4) {
+
+                mostrarMejorEstudiante();
+
+            } else if (opcion == 5) {
+
+                System.out.println("Saliendo del sistema...");
+                break;
+
+            } else {
+
+                System.out.println("Opción no válida. Intente de nuevo.");
+            }
+        }
+
+        scanner.close();
+    }
         while (true) {
             System.out.println("\n1. Agregar estudiante");
             System.out.println("2. Mostrar lista de estudiantes");
