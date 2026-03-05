@@ -59,23 +59,20 @@ public class Main {
         System.out.println("5. Salir");
         System.out.print("Seleccione una opción: ");
     }
+    // METODO 2 - AGREGAR ESTUDIANTE
+    public static void agregarEstudiante(Scanner scanner) {
 
-            int opcion = Integer.parseInt(scanner.nextLine());
+        System.out.print("Ingrese el nombre del estudiante: ");
+        String nombre = scanner.nextLine();
 
-            if (opcion == 1) {
+        System.out.print("Ingrese la calificación del estudiante: ");
+        double calificacion = Double.parseDouble(scanner.nextLine());
 
-                System.out.print("Ingrese el nombre del estudiante: ");
-                String nombre = scanner.nextLine();
+        estudiantes.add(nombre);
+        calificaciones.add(calificacion);
 
-                System.out.print("Ingrese la calificación del estudiante: ");
-                double calificacion = Double.parseDouble(scanner.nextLine());
-
-                estudiantes.add(nombre);
-                calificaciones.add(calificacion);
-
-                System.out.println("Estudiante agregado correctamente.");
-
-            } else if (opcion == 2) {
+        System.out.println("Estudiante agregado correctamente.");
+    }
 
                 if (estudiantes.isEmpty()) {
                     System.out.println("No hay estudiantes registrados.");
