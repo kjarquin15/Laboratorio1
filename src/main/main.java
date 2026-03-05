@@ -81,7 +81,6 @@ public class Main {
         } else {
 
             System.out.println("\nLista de estudiantes:");
-
             for (int i = 0; i < estudiantes.size(); i++) {
 
                 System.out.println(estudiantes.get(i) +
@@ -90,21 +89,20 @@ public class Main {
         }
     }
 
-            } else if (opcion == 3) {
+    // METODO 4 - CALCULAR PROMEDIO
+    public static void calcularPromedio() {
+        if (calificaciones.isEmpty()) {
+            System.out.println("No hay calificaciones registradas.");
+        } else {
+            double suma = 0;
+            for (double calificacion : calificaciones) {
+                suma += calificacion;
+            }
+            double promedio = suma / calificaciones.size();
 
-                if (calificaciones.isEmpty()) {
-                    System.out.println("No hay calificaciones registradas.");
-                } else {
-                    double suma = 0;
-
-                    for (double calificacion : calificaciones) {
-                        suma += calificacion;
-                    }
-
-                    double promedio = suma / calificaciones.size();
-                    System.out.println("El promedio de calificaciones es: " + promedio);
-                }
-
+            System.out.println("El promedio de calificaciones es: " + promedio);
+        }
+    }
             } else if (opcion == 4) {
 
                 if (calificaciones.isEmpty()) {
