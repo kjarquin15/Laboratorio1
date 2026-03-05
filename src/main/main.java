@@ -50,13 +50,15 @@ public class Main {
 
         scanner.close();
     }
-        while (true) {
-            System.out.println("\n1. Agregar estudiante");
-            System.out.println("2. Mostrar lista de estudiantes");
-            System.out.println("3. Calcular promedio de calificaciones");
-            System.out.println("4. Mostrar estudiante con la calificación más alta");
-            System.out.println("5. Salir");
-            System.out.print("Seleccione una opción: ");
+    // METODO 1 - MOSTRAR MENU
+    public static void mostrarMenu() {
+        System.out.println("\n1. Agregar estudiante");
+        System.out.println("2. Mostrar lista de estudiantes");
+        System.out.println("3. Calcular promedio de calificaciones");
+        System.out.println("4. Mostrar estudiante con la calificación más alta");
+        System.out.println("5. Salir");
+        System.out.print("Seleccione una opción: ");
+    }
 
             int opcion = Integer.parseInt(scanner.nextLine());
 
